@@ -6,3 +6,6 @@ Extract labels from free text radiology reports
 A few datasets to experiment with:
 - MIMIC-III
 - i2b2 2012 NLP
+
+## Model
+
