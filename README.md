@@ -21,3 +21,8 @@ Next we will fine tune a classification (with the classes being the abnormalitie
 - Step 2: Run `fine_tune.py` to train a model on the pseudo labels from step 1
 - Step 3: Run an error analysis and clean up mis-labeled samples
 - Step 4: Repeat steps 2 and 3 until we get decent results
+
+## TODO 
+
+- Add requirements.txt
+- Get model training part working with a few different variants/options
