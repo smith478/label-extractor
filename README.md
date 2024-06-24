@@ -7,6 +7,9 @@ A few datasets to experiment with:
 - MIMIC-III
 - i2b2 2012 NLP
 
+## Getting started
+Using `pip` the Python environment can be created using `requirements.txt`.
+
 ## Approach overview
 
 In order to get our initial set of labels the idea is to use `zero_shot_model.py`. This script uses a generative LLM (e.g. Llama 3) to try to identify presence of a set of abnormalities from the free text within each radiology report. 
@@ -24,5 +27,5 @@ Next we will fine tune a classification (with the classes being the abnormalitie
 
 ## TODO 
 
-- Add requirements.txt
 - Get model training part working with a few different variants/options
+- Add dockerfile and `Getting started` instructions using docker
