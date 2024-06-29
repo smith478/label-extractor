@@ -17,6 +17,8 @@ In order to get our initial set of labels the idea is to use `zero_shot_model.py
 
 We then inspect the results of these quasi-labels to see how trustworthy they are and also clean up the labels. We also verify that they are properly formatted. Here we could use a streamlit tool to efficiently label the reports.
 
+One component to add as well is vectorized/RAG search using either [DSPy](https://github.com/stanfordnlp/dspy) or [marvin](https://github.com/PrefectHQ/marvin?tab=readme-ov-file). In our initial use case of a small number classes (i.e. abnormalities), this is likely unnecessary, however is useful for a large number of classes. 
+
 ### Phase 1:
 Next we will fine tune a classification (with the classes being the abnormalities we are trying to detect) LLM using `fine_tune.py`, and do an error analysis to both look at the quality of the model and also to do another quality check on our labels. This may involve some iterative fine tuning and label cleanup.
 
