@@ -4,7 +4,7 @@ from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
 from typing import List
 
-# TODO models to test: sentence-transformers/all-MiniLM-L6-v2, sentence-transformers/all-MiniLM-L12-v2, sentence-transformers/all-mpnet-base-v2, intfloat/e5-small-v2, Alibaba-NLP/gte-Qwen2-7B-instruct 
+# TODO models to test: sentence-transformers/all-MiniLM-L6-v2, sentence-transformers/all-MiniLM-L12-v2, sentence-transformers/all-mpnet-base-v2, intfloat/e5-small-v2, Alibaba-NLP/gte-Qwen2-7B-instruct, nomic-ai/nomic-embed-text-v1.5 
 def get_embeddings(model_name: str, texts: List[str]) -> np.ndarray:
     model = SentenceTransformer(model_name)
     return model.encode(texts)
