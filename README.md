@@ -38,4 +38,4 @@ This may provide lower lift, but given that there is common terminology within r
 ## TODO 
 
 - Get model training part working with a few different variants/options
-- Add dockerfile and `Getting started` instructions using docker
+- Add `Getting started` instructions using docker
