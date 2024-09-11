@@ -13,7 +13,7 @@ Using `pip` the Python environment can be created using `requirements.txt`.
 ## Approach overview
 
 ### Phase 0:
-In order to get our initial set of labels the idea is to use `zero_shot_model.py`. This script uses a generative LLM (e.g. Llama 3) to try to identify presence of a set of abnormalities from the free text within each radiology report. 
+In order to get our initial set of labels the idea is to use `zero_shot_model.py`. This script uses a generative LLM (e.g. Llama 3.1-instruct or Gemma 2) to try to identify presence of a set of abnormalities from the free text within each radiology report. 
 
 We then inspect the results of these quasi-labels to see how trustworthy they are and also clean up the labels. We also verify that they are properly formatted. Here we could use a streamlit tool to efficiently label the reports.
 
@@ -30,7 +30,7 @@ This may provide lower lift, but given that there is common terminology within r
 
 ## Model training
 
-- Step 1: Use `zero_shot_model.py` to get pseudo labels from llama 3
+- Step 1: Use `zero_shot_model.py` to get pseudo labels from llama 3.1 (make sure to use an instruction tuned version)
 - Step 2: Run `fine_tune.py` to train a model on the pseudo labels from step 1
 - Step 3: Run an error analysis and clean up mis-labeled samples
 - Step 4: Repeat steps 2 and 3 until we get decent results
